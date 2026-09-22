@@ -4,8 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script>
+        function getresult(){
+          let marks=document.getElementById("num").value;
+          if(marks>=50){
+            document.getElementById("result").innerHTML="Pass";
+            document.getElementById("result").style.color="green";
+          }
+          else{
+            document.getElementById("result").innerHTML="Fail";
+            document.getElementById("result").style.color="red";
+          }
+        }
+        function reset(){
+            document.getElementById("num").value="";
+            document.getElementById("result").innerHTML="";
+        }
+    </script>
 </head>
 <body>
-    <h1>Hello</h1>
+    Enter Marks: <input type="text" placeholder="Enter Your Marks" id="num">
+    <br><br>
+    <p id="result"></p><br>
+    <button onclick="getresult()">Get Result</button>
+    <button onclick="reset()">Reset</button>
 </body>
 </html>
